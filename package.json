@@ -1,0 +1,49 @@
+{
+  "name": "babel-plugin-react-native-class-prop",
+  "version": "0.1.0",
+  "description": "Babel plugin to transpile style prop",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "Zeljko Markovic <zeljko89markovic@gmail.com>",
+  "repository": "git@github.com:zeljko89/babel-plugin-react-native-class-prop.git",
+  "bugs": {
+    "url": "https://github.com/zeljko89/babel-plugin-react-native-class-prop/issues"
+  },
+  "homepage": "https://github.com/zeljko89/babel-plugin-react-native-class-prop#readme",
+  "keywords": [
+    "react",
+    "css",
+    "css-in-js",
+    "styled-components",
+    "babel-plugin",
+    "babel"
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "test": "jest",
+    "release": "release-it"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-0",
+    "babel-plugin-tester": "^5.5.1",
+    "conventional-changelog-cli": "^2.0.5",
+    "dedent": "^0.7.0",
+    "eslint": "^5.6.0",
+    "eslint-config-satya164": "^2.0.1",
+    "jest": "^23.6.0",
+    "path": "^0.12.7",
+    "prettier": "^1.14.3",
+    "release-it": "^7.6.1"
+  },
+  "dependencies": {
+    "@babel/plugin-syntax-jsx": "^7.0.0"
+  },
+  "resolutions": {
+    "**/babel-core": "7.0.0-bridge.0"
+  }
+}
