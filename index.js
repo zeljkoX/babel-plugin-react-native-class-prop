@@ -6,6 +6,8 @@ const {
 
 const REACT_NATIVE_STYLE_PROP = 'style';
 
+const EVALUATE_CLASS = 'evaluateClass';
+
 module.exports = function(babel, { propName = 'class', classes }) {
   const { types: t } = babel;
   if (!classes) {
@@ -112,7 +114,7 @@ module.exports = function(babel, { propName = 'class', classes }) {
           !t.isLiteral(path.node.source, {
             value: 'babel-plugin-react-native-class-prop',
           }) ||
-          !(path.node.specifiers[0].local.name === 'evaluateClass')
+          !(path.node.specifiers[0].local.name === EVALUATE_CLASS)
         ) {
           return;
         }
@@ -123,7 +125,7 @@ module.exports = function(babel, { propName = 'class', classes }) {
               !t.isJSXExpressionContainer(path.node) ||
               !t.isCallExpression(path.node.expression) ||
               !t.isIdentifier(path.node.expression.callee, {
-                name: 'evaluateClass',
+                name: EVALUATE_CLASS,
               })
             ) {
               return;
@@ -142,6 +144,4 @@ module.exports = function(babel, { propName = 'class', classes }) {
   };
 };
 
-module.exports.evaluate = {
-  evaluateClass: () => {},
-};
+module.exports['EVALUATE_CLASS'] = () => {};
