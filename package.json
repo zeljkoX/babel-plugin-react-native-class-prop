@@ -1,15 +1,15 @@
 {
   "name": "babel-plugin-react-native-class-prop",
   "version": "0.1.0",
-  "description": "Babel plugin to transpile style prop",
+  "description": "Babel plugin to transpile class prop",
   "main": "index.js",
   "license": "MIT",
   "author": "Zeljko Markovic <zeljko89markovic@gmail.com>",
-  "repository": "git@github.com:zeljko89/babel-plugin-react-native-class-prop.git",
+  "repository": "git@github.com:zeljkoX/babel-plugin-react-native-class-prop.git",
   "bugs": {
-    "url": "https://github.com/zeljko89/babel-plugin-react-native-class-prop/issues"
+    "url": "https://github.com/zeljkoX/babel-plugin-react-native-class-prop/issues"
   },
-  "homepage": "https://github.com/zeljko89/babel-plugin-react-native-class-prop#readme",
+  "homepage": "https://github.com/zeljkoX/babel-plugin-react-native-class-prop#readme",
   "keywords": [
     "react",
     "css",
