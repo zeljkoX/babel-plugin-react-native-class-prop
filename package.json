@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-react-native-class-prop",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Babel plugin to transpile class prop",
   "main": "index.js",
   "license": "MIT",

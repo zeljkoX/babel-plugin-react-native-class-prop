@@ -144,4 +144,4 @@ module.exports = function(babel, { propName = 'class', classes }) {
   };
 };
 
-module.exports['EVALUATE_CLASS'] = () => {};
+module.exports[EVALUATE_CLASS] = () => {};
