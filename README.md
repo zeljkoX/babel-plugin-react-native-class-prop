@@ -50,11 +50,11 @@ Now you can use the `class` prop in your components:
 ```js
 function App(props) {
   return (
-    <div
+    <View
       class="flex justify-center"
     >
       Hello world
-    </div>
+    </View>
   );
 }
 ```
@@ -64,11 +64,11 @@ If class should be applied conditionally this plugin supports syntax similar to 
 ```js
 function App(props) {
   return (
-    <div
+    <View
       class={["flex", { "justify-center": props.center }]}
     >
       Hello world
-    </div>
+    </View>
   );
 }
 ```
