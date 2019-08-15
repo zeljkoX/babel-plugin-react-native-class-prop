@@ -1,10 +1,10 @@
 function App(props) {
   return <Paragraph style={[{
-    height: 100
-  }, {
     "flex": 1
   }, true && {
     "justifyContent": "center"
+  }, {
+    height: 100
   }]}>
             Hello world
         </Paragraph>;

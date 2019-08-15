@@ -2,6 +2,7 @@ const syntax = require('@babel/plugin-syntax-jsx').default;
 const {
   createClassPropAST,
   createClassPropLogicalExpressionAST,
+  getKeyValue,
 } = require('./utils');
 
 const REACT_NATIVE_STYLE_PROP = 'style';
@@ -57,14 +58,14 @@ module.exports = function(babel, { propName = 'class', classes }) {
           let values = [];
           path.node.value.expression.elements.forEach(item => {
             if (t.isStringLiteral(item)) {
-              values.push(createClassPropAST(item.value, babel, classes));
+              values.unshift(createClassPropAST(item.value, babel, classes));
             }
 
             if (t.isObjectExpression(item)) {
               item.properties.forEach(i => {
                 values.push(
                   createClassPropLogicalExpressionAST(
-                    i.key.value,
+                    getKeyValue(i.key, t),
                     i.value,
                     babel,
                     t,
@@ -103,9 +104,9 @@ module.exports = function(babel, { propName = 'class', classes }) {
         }
 
         if (t.isArrayExpression(classPropAST)) {
-          result.elements = result.elements.concat(classPropAST.elements);
+          result.elements = classPropAST.elements.concat(result.elements);
         } else {
-          result.elements.push(classPropAST);
+          result.elements.unshift(classPropAST);
         }
         stylePropAST.value.expression = result;
       },

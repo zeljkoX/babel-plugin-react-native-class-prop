@@ -64,8 +64,18 @@ function createClassPropLogicalExpressionAST(
   );
 }
 
+function getKeyValue(key, t) {
+  if (t.isLiteral(key)) {
+    return key.value;
+  }
+  if (t.isIdentifier(key)) {
+    return key.name;
+  }
+}
+
 module.exports = {
   objectToAST,
   createClassPropAST,
   createClassPropLogicalExpressionAST,
+  getKeyValue,
 };
